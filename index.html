@@ -1,22 +1,25 @@
 <html>
 <script type="text/javascript">
-    function listCookies() {
-        var x = document.cookie; 
-        window.alert(x);
+    var value = document.cookie;
+
+    var testString = ""
+    if (value) {
+        testString = "Hay cookies and the value is: "
+        cookie_value = "testString"
+    } else {
+        testString = "No hay cookies"
     }
-    
-    function listCookies2() {
-        var x = document.write(Object.fromEntries(document.cookie.split('; ').map(c => c.split('='))));
-        window.alert(x);
-    }
+
+    window.alert(testString);
 </script>
 
 </head>
 <body>
-    <h1>Test</h1>
-    <button onclick="listCookies()">Get Value</button>
-  
-      <h1>Test2</h1>
-    <button onclick="listCookies2()">Get Value</button>
+    <h1>Test custom cookies</h1>
+    <h1>
+        <script type="text/javascript">
+          document.write(testString + cookie_value)
+        </script>
+      </h1>
 </body>
 </html>
