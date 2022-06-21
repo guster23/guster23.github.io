@@ -1,14 +1,15 @@
 <html>
 <script type="text/javascript">
     var value = document.cookie;
-
     var testString = ""
     if (value) {
-        testString = "Hay cookies and the value is: "
+        testString = "Hay cookies and the value is: " + value
+        window.alert(testString);
     } else {
         testString = "No hay cookies"
+        window.alert(testString);
     }
-    window.alert(testString);
+    
 </script>
 
 </head>
@@ -16,7 +17,7 @@
     <h1>Test custom cookies</h1>
     <h1>
         <script type="text/javascript">
-          document.write(testString + value)
+          document.write(testString)
         </script>
       </h1>
 </body>
