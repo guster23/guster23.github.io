@@ -1,7 +1,22 @@
-<!DOCTYPE html>
 <html>
+<script type="text/javascript">
+    function listCookies() {
+        var x = document.cookie; 
+        window.alert(x);
+    }
+    
+    function listCookies2() {
+        var x = document.write(Object.fromEntries(document.cookie.split('; ').map(c => c.split('='))));
+        window.alert(x);
+    }
+</script>
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <h1>Test</h1>
+    <button onclick="listCookies()">Get Value</button>
+  
+      <h1>Test2</h1>
+    <button onclick="listCookies2()">Get Value</button>
 </body>
 </html>
