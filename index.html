@@ -1,33 +1,31 @@
 <html>
     <script type="text/javascript">
-        var userName = "";
-        userName = window.navigator.userAgent;
+        var userName = "The user agent is: ";
+        userName = userName + window.navigator.userAgent;
     </script>
 
 <script type="text/javascript">
     var value = document.cookie;
     var testString = "";
     if (value) {
-        testString = "Hay cookies and the value is: ";
-        cookie_value = "testString";
+        testString = "There are cookies and their value is: " + value;
     } else {
-        testString = "No hay cookies";
-        cookie_value = "";
+        testString = "There aren't cookies";
     }
 </script>
 
 </head>
 <body>
     <h1>Test custom cookies</h1>
-    <h1>
+    <h2>
         <script type="text/javascript">
-          document.write(testString + cookie_value)
+          document.write(testString)
         </script>
-    </h1>
-    <h1>
+    </h2>
+    <h2>
         <script type="text/javascript">
           document.write(userName)
         </script>
-    </h1>
+    </h2>
 </body>
 </html>
