@@ -1,15 +1,19 @@
 <html>
+    <script type="text/javascript">
+        var userName = "";
+        userName = window.navigator.userAgent;
+    </script>
+
 <script type="text/javascript">
     var value = document.cookie;
-    var testString = ""
+    var testString = "";
     if (value) {
-        testString = "Hay cookies and the value is: " + value
-        window.alert(testString);
+        testString = "Hay cookies and the value is: ";
+        cookie_value = "testString";
     } else {
-        testString = "No hay cookies"
-        window.alert(testString);
+        testString = "No hay cookies";
+        cookie_value = "";
     }
-    
 </script>
 
 </head>
@@ -17,8 +21,13 @@
     <h1>Test custom cookies</h1>
     <h1>
         <script type="text/javascript">
-          document.write(testString)
+          document.write(testString + cookie_value)
         </script>
-      </h1>
+    </h1>
+    <h1>
+        <script type="text/javascript">
+          document.write(userName)
+        </script>
+    </h1>
 </body>
 </html>
